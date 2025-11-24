@@ -1,14 +1,15 @@
 :root{
-	/* Steam-like dark palette (approximate) */
-	--bg: #0b161f;       /* deep navy background */
-	--card: #0f2a36;     /* slightly lighter card surface */
-	--proj-bg: #163544;  /* project background (teal/blue tone) */
-	--accent: #66c0f4;   /* bright cyan accent */
-	--accent-dark: #2ea0d6; /* stronger accent for emphasis */
-	--muted: #9aa5ad;    /* muted/light gray text */
-	--text: #d7eef7;     /* pale text color */
+	/* Deeper warm yellow palette (reduced eggshell feel) */
+	--bg: #fff2c8;        /* deeper warm pale yellow */
+	--card: #ffeaa2;      /* richer card surface */
+	--proj-bg: #ffd24a;   /* yolk-like project background */
+	--accent: #f0b31a;    /* vibrant yolk accent */
+	--accent-dark: #d39f08;/* stronger accent for emphasis */
+	--tab-active: var(--accent);
+	--muted: #605744;     /* darker muted gray */
+	--text: #15120a;      /* darker text for strong contrast */
 
-	--glass: rgba(255,255,255,0.02);
+	--glass: rgba(21,18,10,0.05);
 	--radius:14px;
 	/* Add a class-based override to switch to sharp corners quickly */
 	body.sharp{--radius:0px}
@@ -27,12 +28,12 @@ html,body{height:100%;margin:0;background:var(--bg);color:var(--text);font-size:
 .header-right{display:flex;align-items:center;gap:16px}
 
 .main{display:flex;flex-direction:column;gap:20px;padding:20px}
-.page-frame{max-width:1280px;margin:20px auto;padding:18px;border-radius:var(--radius);background:var(--card);box-shadow:0 10px 30px rgba(70,69,77,0.06)}
+.page-frame{max-width:1600px;width:min(1600px,calc(100% - 48px));margin:20px auto;padding:18px;border-radius:var(--radius);background:var(--card);box-shadow:0 10px 30px rgba(70,69,77,0.06)}
 .tabs{min-width:160px;background:var(--card);padding:12px;border-radius:var(--radius);height:fit-content}
 .tabs-horizontal{display:flex;gap:8px;padding:0 0 12px 0;align-items:center;border-bottom:1px solid rgba(70,69,77,0.04);margin-bottom:12px}
-.tab-btn{display:inline-block;padding:12px 18px;border-radius:var(--radius);border:1px solid rgba(0,0,0,0.03);background:var(--card);color:#283033;margin-right:8px;cursor:pointer;font-weight:800;font-size:18px;transition:background .14s ease,transform .14s ease}
+.tab-btn{display:inline-block;padding:12px 18px;border-radius:var(--radius);border:1px solid rgba(34,32,24,0.06);background:var(--card);color:var(--text);margin-right:8px;cursor:pointer;font-weight:800;font-size:18px;transition:background .14s ease,transform .14s ease}
 .tab-btn:hover{background:rgba(0,0,0,0.02);transform:translateY(-1px)}
-.tab-btn.active{background:var(--tab-active);color:#172018;box-shadow:0 6px 18px rgba(0,0,0,0.06);border-color:rgba(0,0,0,0.04)}
+.tab-btn.active{background:var(--tab-active);color:var(--text);box-shadow:0 6px 18px rgba(34,32,24,0.06);border-color:rgba(34,32,24,0.04)}
 
 .content{width:100%}
 .tab-panel{display:none;padding:12px;border-radius:var(--radius);background:transparent}
@@ -54,7 +55,7 @@ html,body{height:100%;margin:0;background:var(--bg);color:var(--text);font-size:
 .projects-stacked{display:block;margin-top:12px;}
 .project-stack{background:var(--proj-bg);border-radius:var(--radius);padding:16px;margin-bottom:18px}
 .project-stack h3{margin:0 0 8px;font-size:22px}
-.project-stack p.project-desc{margin:8px 0;color:#283033;font-size:16px}
+.project-stack p.project-desc{margin:8px 0;color:var(--text);font-size:16px}
 .media-wrap.small{height:160px;margin-top:12px;border-radius:var(--radius)}
 .project-stack p.muted{margin-top:6px}
 
@@ -69,7 +70,7 @@ html,body{height:100%;margin:0;background:var(--bg);color:var(--text);font-size:
 /* Lightbox */
 .lightbox{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,0.7);z-index:1200}
 .lightbox[aria-hidden="false"]{display:flex}
-.lb-content{max-width:90%;max-height:85%;background:#000;border-radius:var(--radius);padding:12px;display:flex;align-items:center;justify-content:center}
+.lb-content{max-width:90%;max-height:85%;background:#fff9e6;border-radius:var(--radius);padding:12px;display:flex;align-items:center;justify-content:center}
 .lb-content img,.lb-content video{max-width:100%;max-height:100%;border-radius:var(--radius)}
 .lb-close{position:absolute;top:18px;right:18px;background:transparent;border:none;color:#fff;font-size:20px;cursor:pointer}
 
